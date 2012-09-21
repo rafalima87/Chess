@@ -7,6 +7,7 @@ namespace StudentAI
 {
     public class StudentAI : IChessAI
     {
+        public int numberOfRows = 8;
         #region IChessAI Members that are implemented by the Student
 
         /// <summary>
@@ -31,6 +32,7 @@ namespace StudentAI
         public ChessMove GetNextMove(ChessBoard board, ChessColor myColor)
         {
             throw (new NotImplementedException());
+            
         }
 
         /// <summary>
@@ -43,8 +45,47 @@ namespace StudentAI
         public bool IsValidMove(ChessBoard boardBeforeMove, ChessMove moveToCheck, ChessColor colorOfPlayerMoving)
         {
             throw (new NotImplementedException());
+            
         }
+        public bool NotInCheck() {
+            return true;
+        }
+        public List<ChessMove> getAllMoves(ChessBoard board, ChessColor curColor)
+        {
+            List<ChessMove> retList = new List<ChessMove>();
+            for (int i = 0; i < numberOfRows; i++)
+            {
+                for (int j = 0; j < numberOfRows; j++)
+                {
+                    if (curColor == ChessColor.White)
+                    {
+                        switch (board[i, j])
+                        {
+                            case ChessPiece.WhiteBishop:
 
+                                break;
+                            case ChessPiece.WhiteKing:
+                                break;
+
+                        }
+                    }
+
+                    else
+                    {
+                        switch (board[i, j])
+                        {
+                            case ChessPiece.BlackBishop:
+
+                                break;
+                            case ChessPiece.BlackKing:
+                                break;
+
+                        }
+                    }
+                }
+            }
+            return retList;
+        }
         #endregion
 
 

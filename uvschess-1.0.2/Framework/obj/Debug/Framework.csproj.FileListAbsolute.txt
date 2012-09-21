@@ -1,0 +1,13 @@
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\bin\Debug\UvsChess.exe
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\bin\Debug\UvsChess.pdb
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\UvsChess.Gui.GuiChessBoard.resources
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\UvsChess.Gui.WinGui.resources
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\UvsChess.Gui.AboutUvsChess.resources
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\UvsChess.Gui.Preferences.resources
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\UvsChess.Gui.GuiDecisionTree.resources
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\UvsChess.Gui.MessageBox.resources
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\ResGen.read.1.tlog
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\ResGen.write.1.tlog
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\UvsChess.exe
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\UvsChess.pdb

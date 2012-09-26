@@ -47,12 +47,75 @@ namespace StudentAI
             throw (new NotImplementedException());
             
         }
-        public bool NotInCheck() {
-            return true;
+        public bool IsInCheck(ChessBoard board, ChessColor curColor) {
+            return false;
+        }
+
+        public List<ChessBoard> rookAndBishopCheck(int x, int y, int dx, int dy, ChessBoard board, ChessColor curColor, List<ChessBoard> lst)
+        {
+            x += dx;
+            y += dy;
+
+            if (x > 7 || x < 0 || y > 7 || y < 0)
+                return lst;
+            if (board[x, y].Equals(ChessPiece.Empty))
+            {
+                ChessBoard newBoard = board.Clone();//creates new board state
+                newBoard.MakeMove(new ChessMove(new ChessLocation(x - dx, x - dy), new ChessLocation(x, y)));
+                if (!IsInCheck(newBoard, curColor))
+                {
+                    lst.Add(newBoard);
+                    return rookAndBishopCheck(x,y,dx,dy,newBoard,curColor,lst);
+                }
+                else
+                    return rookAndBishopCheck(x,y,dx,dy,newBoard,curColor,lst);
+            }
+            else
+            {
+                if (curColor == ChessColor.Black) //is black
+                {
+                    if (board[x, y] < ChessPiece.Empty) //piece is black
+                    {
+                        return lst;
+                    }
+                    else
+                    {
+                        ChessBoard newBoard = board.Clone();//creates new board state
+                        newBoard.MakeMove(new ChessMove(new ChessLocation(x - dx, x - dy), new ChessLocation(x, y)));
+                        if (!IsInCheck(newBoard, curColor))
+                        {
+                            lst.Add(newBoard);
+                            return lst;
+                        }
+                        else
+                            return lst;
+                    }
+                }
+                else //is white
+                {
+                    if (board[x, y] > ChessPiece.Empty) //piece is white
+                    {
+                        return lst;
+                    }
+                    else
+                    {
+                        ChessBoard newBoard = board.Clone();//creates new board state
+                        newBoard.MakeMove(new ChessMove(new ChessLocation(x - dx, x - dy), new ChessLocation(x, y)));
+                        if (!IsInCheck(newBoard, curColor))
+                        {
+                            lst.Add(newBoard);
+                            return lst;
+                        }
+                        else
+                            return lst;
+                    }
+                }
+            }
         }
         public List<ChessMove> getAllMoves(ChessBoard board, ChessColor curColor)
         {
             List<ChessMove> retList = new List<ChessMove>();
+            List<ChessBoard> boardList = new List<ChessBoard>();
             for (int i = 0; i < numberOfRows; i++)
             {
                 for (int j = 0; j < numberOfRows; j++)
@@ -62,9 +125,24 @@ namespace StudentAI
                         switch (board[i, j])
                         {
                             case ChessPiece.WhiteBishop:
-
+                                boardList = rookAndBishopCheck(i, j, -1, -1, board, curColor, boardList);
+                                boardList = rookAndBishopCheck(i, j, 1, 1, board, curColor, boardList);
+                                boardList = rookAndBishopCheck(i, j, 1, -1, board, curColor, boardList);
+                                boardList = rookAndBishopCheck(i, j, -1, 1, board, curColor, boardList);
                                 break;
                             case ChessPiece.WhiteKing:
+                                break;
+                            case ChessPiece.WhiteRook:
+                                boardList = rookAndBishopCheck(i, j, -1, 0, board, curColor, boardList);
+                                boardList = rookAndBishopCheck(i, j, 0, 1, board, curColor, boardList);
+                                boardList = rookAndBishopCheck(i, j, 1, 0, board, curColor, boardList);
+                                boardList = rookAndBishopCheck(i, j, 0, -1, board, curColor, boardList);
+                                break;
+                            case ChessPiece.WhiteQueen:
+                                for (int dx = -1; dx < 2; dx++)
+                                    for (int dy = -1; dy < 2; dy++)
+                                        if (dx != 0 && dy != 0)
+                                            boardList = rookAndBishopCheck(i, j, dx, dy, board, curColor, boardList);
                                 break;
 
                         }
@@ -75,9 +153,24 @@ namespace StudentAI
                         switch (board[i, j])
                         {
                             case ChessPiece.BlackBishop:
-
+                                boardList = rookAndBishopCheck(i, j, -1, -1, board, curColor, boardList);
+                                boardList = rookAndBishopCheck(i, j, 1, 1, board, curColor, boardList);
+                                boardList = rookAndBishopCheck(i, j, 1, -1, board, curColor, boardList);
+                                boardList = rookAndBishopCheck(i, j, -1, 1, board, curColor, boardList);
                                 break;
                             case ChessPiece.BlackKing:
+                                break;
+                            case ChessPiece.BlackRook:
+                                boardList = rookAndBishopCheck(i, j, -1, 0, board, curColor, boardList);
+                                boardList = rookAndBishopCheck(i, j, 0, 1, board, curColor, boardList);
+                                boardList = rookAndBishopCheck(i, j, 1, 0, board, curColor, boardList);
+                                boardList = rookAndBishopCheck(i, j, 0, -1, board, curColor, boardList);
+                                break;
+                            case ChessPiece.BlackQueen:
+                                for (int dx = -1; dx < 2; dx++)
+                                    for (int dy = -1; dy < 2; dy++)
+                                        if (dx != 0 && dy != 0)
+                                            boardList = rookAndBishopCheck(i, j, dx, dy, board, curColor, boardList);
                                 break;
 
                         }

@@ -3,3 +3,8 @@ C:\Users\kent\Documents\GitHub\Chess\uvschess-1.0.2\Framework\bin\Debug\ExampleA
 C:\Users\kent\Documents\GitHub\Chess\uvschess-1.0.2\ExampleAI\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\kent\Documents\GitHub\Chess\uvschess-1.0.2\ExampleAI\obj\Debug\ExampleAI.dll
 C:\Users\kent\Documents\GitHub\Chess\uvschess-1.0.2\ExampleAI\obj\Debug\ExampleAI.pdb
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\bin\Debug\ExampleAI.dll
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\bin\Debug\ExampleAI.pdb
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\ExampleAI\obj\Debug\ExampleAI.csprojResolveAssemblyReference.cache
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\ExampleAI\obj\Debug\ExampleAI.dll
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\ExampleAI\obj\Debug\ExampleAI.pdb

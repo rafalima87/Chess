@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="5B942208-A326-4144-850C-CA867E22721A" ModuleId="StudentAI" />
+  <Module PersistentId="BE8F4EFB-458E-431A-A763-5988804DC0ED" ModuleId="Framework" />
+  <Module PersistentId="5B942207-A326-4144-850C-CA867E22721A" ModuleId="ExampleAI" />
+</Modules>

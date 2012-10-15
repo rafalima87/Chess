@@ -28,3 +28,4 @@ C:\Users\kent\Documents\GitHub\Chess\uvschess-1.0.2\Framework\obj\Debug\UvsChess
 C:\Users\kent\Documents\GitHub\Chess\uvschess-1.0.2\Framework\obj\Debug\UvsChess.pdb
 >>>>>>> 8657368e4fc9dbf002acb248dfd306362d12ec99
 C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\Framework.csproj.GenerateResource.Cache
+C:\Users\Rafael\Documents\Pessoal\Classes\CS 4470\Chess\uvschess-1.0.2\Framework\obj\Debug\Framework.csprojResolveAssemblyReference.cache
